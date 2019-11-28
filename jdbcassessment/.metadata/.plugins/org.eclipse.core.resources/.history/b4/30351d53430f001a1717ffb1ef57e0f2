@@ -1,0 +1,6 @@
+package com.ustglobal.phonesimulator.dao;
+
+public interface ContactDao {
+	
+
+}

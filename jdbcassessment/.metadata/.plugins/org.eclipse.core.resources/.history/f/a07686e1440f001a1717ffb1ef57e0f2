@@ -1,0 +1,20 @@
+package com.ustglobal.phonesimulator.dao;
+
+import com.ustglobal.phonesimulator.dto.Contactbean;
+
+public interface ContactDao {
+	public Contactbean showAllContacts();
+	public Contactbean searchContact(String name);
+	
+	public  void call();
+	public void message();
+	public void goBack();
+	
+	public int operateOnContact();
+	public int insertContact(Contactbean bean);
+	public int deleteContact(Contactbean bean);
+	public int editContact(Contactbean bean);
+	
+	
+
+}
