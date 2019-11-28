@@ -1,0 +1,45 @@
+#gred{
+    font-style: oblique;
+    font-size: 50px;
+    font-weight: bolder;
+}
+#gred1{
+    text-align: center
+}
+p{
+    text-align: center;
+}
+/*#green{
+    width: 500px;
+    height: 50px;
+    margin-left:400px;
+}*/
+*{
+    margin:0px;
+    padding: 0px;
+    font-family:sans-serif;
+}
+.main{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-left: 700px;
+}
+img{
+    width:250px;
+    height:300px; 
+}
+#deep{
+    height:50px;
+    width:800px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+#back{
+    background-image: url(/pixabay/landscape-4387209__340.jpg)
+}
+span{
+    font-size: 20px;
+}
+select{
+    background-color:midnightblue;
+}
