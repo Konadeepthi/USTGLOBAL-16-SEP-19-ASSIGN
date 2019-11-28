@@ -1,0 +1,32 @@
+#green{
+    font-size: 50px;
+}
+#greet{
+    font-size: 20px;
+}
+.main{
+    width:1100px;
+    background-color: black;
+    margin: 0px;
+    overflow: auto;
+    color: white;
+}
+.main p{
+float:left;
+font-size: 20px;
+text-align: center;
+padding: 20px;
+}
+input[type="button"]{
+    background-color: deepskyblue;
+    height: 80px;
+    width: 350px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+#head{
+    text-align: center;
+}
