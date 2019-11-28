@@ -1,0 +1,47 @@
+BREAK:
+NOTE:Break: Break statement can be used only in switch or loops.
+METHODS:
+SYNTAX: returntype methodname(parameters)
+{
+//code of buisiness logic
+}
+--->We cant write method inside a method but we acn call the method inside the method.
+EX:class Functions1{
+public static void main(String arg[]){
+int a=30;
+int b=20;
+int c=15;
+int d=sum(a,b);//--->Arguments//
+System.out.println(d);
+}
+static int sum(int x,int y)//---->parameters//
+{
+int z=x+y;
+byte p=10;
+return p;//--->RETURN TYPE AND RETURNING VALUE IS DIFFERENT//
+}
+}
+--->In void method the compilar automatically add the return type if we are not write the retun;.
+CLASS:
+--->Blue print of an object.
+---->It should define the states and behaviours.
+---->states is nothing but variables.
+----->behaviours is nothing but methods.
+OBJECT:
+---->Real entity which has states and behaviours.
+---->It is also called instance of class.
+Ex: class pen
+{
+int cost;    |
+String color;|-->states
+String brand;|
+void write()--->behaviour 
+{
+System.out.println("write");
+}
+new pen();
+System.out.println(new pen().color);-->we can acces the variables like this.
+pen p=new pen();  //pen=class type && p=reference variable.
+System.out.println(p.color);
+System.out.println(p.write());
+}

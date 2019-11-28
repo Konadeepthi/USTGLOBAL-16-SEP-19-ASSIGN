@@ -1,0 +1,7 @@
+package com.ustglobal.jspwithhibernateapp.dto;
+public class Product {
+	private pid;
+	private pname;
+	private quantity;
+
+}

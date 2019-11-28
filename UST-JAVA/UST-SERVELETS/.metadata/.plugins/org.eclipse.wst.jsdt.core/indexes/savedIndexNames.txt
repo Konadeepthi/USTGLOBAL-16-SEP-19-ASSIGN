@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+E:\UST-JAVA\UST-SERVELETS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3032006169.index
+338441001.index
+1121163902.index
+205922592.index
+287702027.index
+3142688457.index
+2582384556.index

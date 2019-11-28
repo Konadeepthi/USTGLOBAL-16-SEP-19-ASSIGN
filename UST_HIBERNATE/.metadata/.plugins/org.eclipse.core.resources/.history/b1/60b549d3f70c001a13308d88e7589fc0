@@ -1,0 +1,7 @@
+package com.ustglobal.jpawithhibernateapp.many.to.many;
+
+public class PencilBox {
+	private int bid;
+	private String bname;
+
+}

@@ -1,0 +1,5 @@
+package com.ustglobal.jpawithhibernateapp.one_to_one;
+
+public class TestOneToOne {
+
+}

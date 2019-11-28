@@ -1,0 +1,11 @@
+package com.ustglobal.jpawithhibernateapp;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+
+public class InsertQuery {
+	Connection con=null;
+	Statement stmt=null;
+	String qry="insert into employee_info values(1,'vijay',68000,'M')";
+}

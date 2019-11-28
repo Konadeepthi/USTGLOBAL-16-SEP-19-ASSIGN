@@ -1,0 +1,8 @@
+package com.ustglobal.jpawithhibernateapp.many.to.many;
+
+public class Pencil {
+	private int pid;
+	private String color;
+	private PencilBox pencilBox;
+
+}

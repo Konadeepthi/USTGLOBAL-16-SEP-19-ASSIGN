@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ustglobal.thread.defining.MyRunnable"/>
+<fullyQualifiedTypeName name="com.ustglobal.thread.properties.MyPriorityThread"/>
+<fullyQualifiedTypeName name="com.ustglobal.thread.properties.MyIdThread"/>
+<fullyQualifiedTypeName name="com.ustglobal.thread.pausing.MyThread"/>
+<fullyQualifiedTypeName name="com.ustglobal.thread.pausing.MyJoinThread"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+</qualifiedTypeNameHistroy>

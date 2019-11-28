@@ -1,0 +1,26 @@
+package com.ustglobal.jpawithhibernateapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Driver;
+
+
+public class InsertQuery {
+	public static void main(String[] args) {
+	Connection con=null;
+	Statement stmt=null;
+	String qry="insert into employee_info values(1,'vijay',68000,'M')";
+	try {
+		Driver driver=new Driver();
+		DriverManager.registerDriver(driver);
+		String sql=""
+		con=DriverManager.getConnection(sql);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+}

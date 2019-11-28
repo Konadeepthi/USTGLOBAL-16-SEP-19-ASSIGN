@@ -1,0 +1,10 @@
+package com.ustglobal.jpawithhibernateapp.productinfo;
+
+import javax.persistence.EntityManager;
+
+public class RemoveDemo {
+	public static void main(String[] args) {
+
+	}
+
+}

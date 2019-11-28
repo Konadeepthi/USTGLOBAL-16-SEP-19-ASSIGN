@@ -1,0 +1,13 @@
+package com.ustglobal.jpawithhibernate1.student;
+
+import com.ustglobal.jpawithhibernate1.dto.Student;
+
+public class InsertDemo1 {
+	public static void main(String[] args) {
+		Student student=new Student();
+		student.setSid(1);
+		student.setSname("deepthi");
+		student.setAge(21);
+	}
+
+}

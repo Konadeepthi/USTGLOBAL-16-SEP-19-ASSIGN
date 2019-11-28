@@ -1,0 +1,5 @@
+package com.ustglobal.jspwithhibernateapp.dto;
+
+public class ReadDemo {
+
+}

@@ -1,0 +1,24 @@
+package com.ustglobal.jpawithhibernateapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Driver;
+import com.mysql.jdbc.PreparedStatement;
+
+public class DynamicUpdateQuery {
+	public static void main(String[] args) {
+	Connection con=null;
+	PreparedStatement pstmt=null;
+	String sql="update employee_info set name=? where eid=?";
+	try {
+		Driver driver=new Driver();
+		DriverManager.registerDriver(driver);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+}

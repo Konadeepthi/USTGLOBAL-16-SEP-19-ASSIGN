@@ -1,0 +1,19 @@
+package com.ustglobal.jpawithhibernateapp.one_to_one;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+@Table(name="product")
+@Entity
+@Data
+public class Person {
+	@Id
+	@Column
+	private int pid;
+	@Column
+	private int pname;
+	
+}

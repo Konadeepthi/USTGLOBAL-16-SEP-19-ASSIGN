@@ -1,0 +1,41 @@
+package com.ustglobal.jpawithhibernateapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Driver;
+import com.mysql.jdbc.PreparedStatement;
+
+public class DynamicUpdateQuery {
+	public static void main(String[] args) {
+	Connection con=null;
+	java.sql.PreparedStatement pstmt=null;
+	String url="jdbc:mysql://localhost:3306/ust_ty_db?user=root&password=root";
+	String sql="update employee_info set name=? where eid=? ";
+	try {
+		Driver driver=new Driver();
+		DriverManager.registerDriver(driver);
+		con=DriverManager.getConnection(url);
+		pstmt=con.prepareStatement(sql);
+		String empid=args[0];
+		int id=Integer.parseInt(empid);
+		String name=args[1];
+		pstmt.setString(1,name);
+		pstmt.setInt(2, id);
+		int count=pstmt.executeUpdate();
+		System.out.println("number of rows affected"+count);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally{
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}
+}

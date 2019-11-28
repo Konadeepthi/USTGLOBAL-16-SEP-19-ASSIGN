@@ -1,0 +1,28 @@
+package com.ustglobal.jpawithhibernateapp.one_to_one;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Table(name="product")
+@Entity
+public class Person {
+	@Id
+	@Column
+	private int pid;
+	@Column
+	private int pname;
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public int getPname() {
+		return pname;
+	}
+	public void setPname(int pname) {
+		this.pname = pname;
+	}
+
+}
