@@ -1,0 +1,11 @@
+var todayDate=new Date();
+console.log('today date',todayDate);
+console.log('day :'+todayDate.getDay());
+console.log('month: '+todayDate.getMonth());
+console.log('year: '+todayDate.getFullYear());
+var constMilli=new Date(0);
+console.log('Date: '+constMilli);
+var constString=new Date('nov 10');
+console.log('date String constructor: '+constString);
+var constYear=new Date(2017,10);
+console.log('Date year constructor: '+constYear);
