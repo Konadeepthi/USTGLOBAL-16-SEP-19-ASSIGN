@@ -1,0 +1,49 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="scheduleInter(form)">
+        <h1 class="text-center bg-primary text-white">Schedule Interview </h1>
+        <div class="form-group">
+          <h5 style="color: red">*</h5><input type="text" name="candidate" id="candidate" class="form-control" placeholder="enter your candiadte Name..." #candidate="ngModel" ngModel required minlength="3">
+           <div *ngIf="candidate.touched && candidate.invalid">
+               <p *ngIf="candidate.errors.required" class="alert alert-danger">Please Enter candidate Name,,</p>
+               <p *ngIf="candidate.errors.minlength" class="alert alert-danger">minimum 3 characters,,,</p>
+            </div>
+        </div>
+        <div class="form-group">
+                <h5 style="color: red">*</h5><input type="number" name="yoe" id="yoe" class="form-control" placeholder="enter year of experience..." #yoe="ngModel" ngModel required minlength="1">
+                 <div *ngIf="yoe.touched && yoe.invalid">
+                     <p *ngIf="yoe.errors.required" class="alert alert-danger">Please Enter Year of experience,,</p>
+                     
+                  </div>
+              </div>
+         <div class="form-group">
+           <h5 style="color: red">*</h5><h5>Skills</h5><input type="radio" name="skills" id="skills" #skills="ngModel" ngModel required>java
+           <input type="radio" name="skills" id="skills">Angular
+           <input type="radio" name="skills" id="skills">SQL
+           <input type="radio" name="skills" id="skills">Spring
+             <div *ngIf="skills.touched && skills.invalid">
+              <p *ngIf="skills.errors.required" class="alert alert-danger">Please Select skill,,</p>
+        </div>
+          </div>
+         
+            <div class="form-group">
+              <h5 style="color: red">*</h5><input type="text" name="ctc" id="ctc" class="form-control" placeholder="Current CTC" #ctc="ngModel" ngModel required>
+            <div *ngIf="ctc.touched && ctc.invalid">
+              <p *ngIf="ctc.errors.required" class="alert alert-danger">pleace enter CTC</p>
+            </div>
+            </div>
+            <div class="form-group">
+                    <h5 style="color: red">*</h5><input type="text" name="ectc" id="ectc" class="form-control" placeholder="Expected CTC" #ectc="ngModel" ngModel required>
+                  <div *ngIf="ectc.touched && ectc.invalid">
+                    <p *ngIf="ectc.errors.required" class="alert alert-danger">pleace enter CTC</p>
+                  </div>
+                  </div>
+            <div class="form-group">
+              <h5 style="color: red">*</h5><select name="relocate" id="relocate" class="form-control">
+                  <option value="ready to relocate" selected disabled>Ready to Relocate</option>
+                  <option value="yes">Yes</option>
+                  <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Requirement</button>
+            </div>
+    </form>

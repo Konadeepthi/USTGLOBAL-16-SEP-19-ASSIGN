@@ -1,0 +1,6 @@
+<div class="col-md-8 card card-body float-left mt-5" *ngIf="selectedNews">
+    <img src="{{selectedNews.urlToImage}}" alt="">
+    <h4>{{selectedNews.title}}</h4>
+    <p>{{selectedNews.description}}</p>
+    <a href="{{selectedNews.url}}">more...</a>
+</div>

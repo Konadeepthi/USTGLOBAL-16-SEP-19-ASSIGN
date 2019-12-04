@@ -1,0 +1,7 @@
+.card.card-body.col-md-4.mt-5.float-left {
+    overflow: scroll;
+    height: 700px;
+    }
+    img{
+        height: 200px;
+    }

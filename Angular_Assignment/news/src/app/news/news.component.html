@@ -1,0 +1,63 @@
+
+   <form action="" class="col-md-6 form-group offset-3 card card-body" #form="ngForm" (ngSubmit)="sendData(form)">
+    <select name="country" id="country" class="form-control" #country="ngModel" ngModel required>
+        <option value="" selected disabled>Select Country</option>
+        <option value="in">India</option>
+        <option value="jp">Japan</option>
+        <option value="us">USA</option>
+        <option value="ch">China</option>
+        <option value="nz">Newzland</option>
+        <option value="eg">England</option>
+        <option value="ca">Canada</option>
+        <option value="rs">Russia</option>
+    </select>
+    <div *ngIf="country.touched && country.invalid">
+            <p *ngIf="country.errors.required" class="alert alert-danger">This Field Required</p>
+        </div>
+    <br>
+    <select name="categories" id="categories" class="form-control" #categories="ngModel" ngModel required>
+        <option value="" selected disabled>Select Categories</option>
+        <option value="business">Business</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="sports">Sports</option>
+        <option value="science">Science</option>
+        <option value="general">General</option>
+        <option value="health">Health</option>
+        <option value="technology">Technology</option>
+       
+    </select>
+    <div *ngIf="categories.touched && categories.invalid">
+            <p *ngIf="categories.errors.required" class="alert alert-danger">This Field Required</p>
+        </div>
+    <br>
+    <button type="submit" class="btn btn-outline-success float-right my-2 my-sm-0" [disabled]="form.invalid">Search</button>
+</form>
+
+
+<div class="card card-body col-md-3 float-left" style="height: 400px;" *ngFor="let n of news">
+    <img src="{{n.urlToImage}}" alt="" data-target="#exampleModal" data-toggle="modal" (click)="fun(n)">
+    <p>{{n.title}}</p>
+</div>
+<div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">{{select.title}}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    <img src="{{select.urlToImage}}" alt="">
+                    <p>{{select.description}}</p>
+                    <a href="{{select.url}}">More...</a>
+                </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+</div>

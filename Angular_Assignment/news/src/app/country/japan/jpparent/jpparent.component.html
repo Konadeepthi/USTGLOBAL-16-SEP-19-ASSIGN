@@ -1,0 +1,7 @@
+<div class="card card-body mt-5 col-md-4 float-left">
+    <div class="card card-body" *ngFor="let n of news">
+        <img src="{{n.urlToImage}}" alt="" (click)="fun(n)">
+        <p>{{n.title}}</p>
+    </div>
+</div>
+<app-jpchild [selectedNews]="select"></app-jpchild>

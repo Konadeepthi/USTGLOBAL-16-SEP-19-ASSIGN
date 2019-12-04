@@ -1,0 +1,6 @@
+<app-comchild (getComment)="getCom($event)"></app-comchild>
+<div class="col-md-8 mt-1 offset-2 card card-body" *ngFor="let com of comments" style="background-color: #eeee">
+    <h1 class="text-center text-white" style="background-color: royalblue; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">{{com.title}}</h1>
+    <p>{{com.desc}}</p>
+
+</div>

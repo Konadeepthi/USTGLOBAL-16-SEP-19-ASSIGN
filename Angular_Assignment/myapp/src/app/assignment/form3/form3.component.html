@@ -1,0 +1,60 @@
+<form action="" class="col-md-4 offset-4 card card-body mt-5" #form="ngForm" (ngSubmit)="addUser(form)">
+    <h1 class="text-center bg-primary text-white">Add User</h1>
+    <div class="form-group">
+            <h5 style="color: red">*</h5><input type="text" name="user_name" id="user_name" minlength="4" class="form-control" placeholder="Enter User Name.." #user="ngModel" ngModel required>
+        <div *ngIf="user.touched && user.invalid">
+            <p *ngIf="user.errors.required" class="alert alert-danger"> Please Enter User name..</p>
+            <p *ngIf="user.errors.minlength" class="alert alert-danger"> Please Enter 4 Characters..</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <h5 style="color: red">*</h5><input type="number" name="age" id="age" class="form-control" placeholder="Enter User Age.." #age="ngModel" ngModel required>
+        <div *ngIf="age.touched && age.invalid">
+            <p class="alert alert-danger" *ngIf="age.errors.required">Enter Age..</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <h5 style="color: red">*</h5><h5>Gender</h5>
+        <input type="radio" name="gender" id="gender" required>Male
+        <input type="radio" name="gender" id="gen">Female
+        <input type="radio" name="gender" id="geder">Others
+        <!-- <div *ngIf="gender.errors.required">
+            <p *ngIf="gender.errors.required" class="alert alert-danger">please select gender..</p>
+        </div> -->
+    </div>
+    <div class="form-group">
+        <h5 style="color: red">*</h5><input type="email" name="mail" id="mail" class="form-control" #mail="ngModel" placeholder="User Email.." ngModel required>
+        <div *ngIf="mail.touched && mail.invalid">
+            <p *ngIf="mail.errors.required" class="alert alert-danger"> Enter Email..</p>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <h5 style="color: red">*</h5><input type="number" name="contact" id="contact" class="form-control" placeholder="Contact Number.." #contact="ngModel" minlength="9" maxlength="10" ngModel required>
+        <div *ngIf="contact.touched && contact.invalid">
+            <p *ngIf="contact.errors.required" class="alert alert-danger">please enter contact number..</p>
+            <p *ngIf="contact.errors.maxlength" class="alert alert-danger">max 10 number..</p>
+            <p *ngIf="contact.errors.minlength" class="alert alert-danger">min 10 number..</p>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <h5 style="color: red">*</h5><input type="password" name="password" id="password" class="form-control" placeholder="password" #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngModel required>
+        <div *ngIf="password.touched && password.invalid">
+            <p *ngIf="password.errors.required" class="alert alert-danger"> please enter password</p>
+            <p *ngIf="password.errors.pattern" class="alert alert-danger"> please enter correct password</p>
+        </div>
+    </div>
+  <div class="form-group">
+      <h5 style="color: red">*</h5><input type="password" name="cpassword" id="cpassword" class="form-control" #cpass="ngModel" ngModel required>
+      <div *ngIf="match">
+          <p *ngIf="match" class="alert alert-danger">password not matching</p>
+      </div>
+  </div>
+  <div class="form-gruop">
+      <button type="submit" class="btn float-right btn-outline-success" [disabled]="form.invalid"> Add User</button>
+     
+  </div>
+
+
+</form>

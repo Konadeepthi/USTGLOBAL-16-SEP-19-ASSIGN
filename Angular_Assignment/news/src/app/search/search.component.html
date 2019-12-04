@@ -1,0 +1,7 @@
+<div *ngIf="news">
+    <div class="col-md-3 float-left card card-body" *ngFor="let n of news" style="height: 350px;">
+    <a href="{{n.url}}"><img src="{{n.urlToImage}}" alt="">
+    <p>{{n.title}}</p></a>
+</div>
+</div>
+

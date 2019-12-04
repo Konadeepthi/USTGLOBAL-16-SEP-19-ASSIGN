@@ -1,0 +1,35 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="addProduct(form)">
+        <h1 class="text-center bg-primary text-white">Add Product </h1>
+        <div class="form-group">
+          <h5 style="color: red">*</h5><input type="text" name="product" id="product" class="form-control" placeholder="enter product Name..." #productname="ngModel" ngModel required minlength="3">
+           <div *ngIf="productname.touched && productname.invalid">
+               <p *ngIf="productname.errors.required" class="alert alert-danger">Please Enter product Name,,</p>
+               <p *ngIf="productname.errors.minlength" class="alert alert-danger">minimum 3 characters,,,</p>
+            </div>
+        </div>
+        <div class="form-group">
+                <h5 style="color: red">*</h5><input type="number" name="price" id="price" class="form-control" placeholder="enter product price..." #productprice="ngModel" ngModel required minlength="1">
+                 <div *ngIf="productprice.touched && productprice.invalid">
+                     <p *ngIf="productprice.errors.required" class="alert alert-danger">Please Enter price,,</p>
+                     
+                  </div>
+              </div>
+      
+         
+            <div class="form-group">
+              <h5 style="color: red">*</h5><input type="text" name="desc" id="desc" size="150"  class="form-control" placeholder="Enter description" #productdesc="ngModel" ngModel required>
+            <div *ngIf="productdesc.touched && productdesc.invalid">
+              <p *ngIf="productdesc.errors.required" class="alert alert-danger">please enter description</p>
+            </div>
+            </div>
+            <div class="form-group">
+                    <h5 style="color: red">*</h5><input type="url" name="url" id="url" class="form-control" placeholder="Enter url" #producturl="ngModel" ngModel required>
+                  <div *ngIf="producturl.touched && producturl.invalid">
+                    <p *ngIf="producturl.errors.required" class="alert alert-danger">please enter Url</p>
+                  </div>
+                  </div>
+           
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Product</button>
+            </div>
+    </form>

@@ -1,0 +1,38 @@
+<div class="col-md-4 mt-5 offset-4 card card-body">
+    <form action="" [formGroup]="form" (ngSubmit)="passData(form)" class="form-group">
+        <h1 class="text-center" appReact>Reactive Form </h1>
+       <div>
+        <input type="text" name="name" id="name" ngModel formControlName="email" class="form-control" required>
+        <div *ngIf="email.touched && email.invalid">
+
+            <p class="text-danger" *ngIf="email.errors.required">this field is required</p>
+            <p class="text-danger" *ngIf="email.errors.unique">this field is required</p>
+      
+        </div>
+    </div>
+    <div>
+        <input type="password" name="password" id="password" ngModel formControlName="password" class="form-control">
+        <div *ngIf="password.touched && password.invalid">
+            <p *ngIf="password.errors.required">this filed</p>
+
+        </div>
+    </div>
+    <div class="">
+        <button type="submit" class="btn btn-outline-success float-right form-control">login</button>
+    </div>
+        </form>
+    </div>
+        <table class="table table-bordered" *ngIf="users">
+            <thead>
+                <tr>
+                <th>name</th>
+                <th>password</th>
+            </tr>
+            </thead>
+            <tr *ngFor="let u of users">
+                <td>{{u.email}}</td>
+                <td>{{u.password}}</td>
+            </tr>
+
+        </table>
+

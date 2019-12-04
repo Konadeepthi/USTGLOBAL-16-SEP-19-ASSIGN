@@ -1,0 +1,46 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="addRequire(form)">
+    <h1 class="text-center bg-primary text-white">Add Requirement here</h1>
+    <div class="form-group">
+      <h5 style="color: red">*</h5><input type="text" name="company_name" id="company_name" class="form-control" placeholder="enter your company_name..." #company="ngModel" ngModel required minlength="3">
+       <div *ngIf="company.touched && company.invalid">
+           <p *ngIf="company.errors.required" class="alert alert-danger">Please Enter Company Name,,</p>
+           <p *ngIf="company.errors.minlength" class="alert alert-danger">minimum 3 characters,,,</p>
+        </div>
+    </div>
+     <div class="form-group">
+       <h5 style="color: red">*</h5><select name="skills" class="form-control" id="skills" #skills="ngModel" ngModel required>
+            <option value="" selected disabled>Select Skills</option>
+            <option value="java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C">C  </option>
+            <option value="C++">C++</option>
+         </select>
+         <div *ngIf="skills.touched && skills.invalid">
+          <p *ngIf="skills.errors.required" class="alert alert-danger">Please Select skill,,</p>
+         
+       </div>
+      </div>
+      <div class="form-group">
+        <h5 style="color: red">*</h5><input type="number" name="yoe" id="yoe" class="form-control" placeholder="enter year of experience..." #yoe="ngModel" ngModel required minlength="1">
+         <div *ngIf="yoe.touched && yoe.invalid">
+             <p *ngIf="yoe.errors.required" class="alert alert-danger">Please Enter Year of experience,,</p>
+             
+          </div>
+      </div>
+        <div class="form-group">
+          <h5 style="color: red">*</h5><input type="text" name="ctc" id="ctc" class="form-control" placeholder="CTC" #ctc="ngModel" ngModel required>
+        <div *ngIf="ctc.touched && ctc.invalid">
+          <p *ngIf="ctc.errors.required" class="alert alert-danger">pleace enter CTC</p>
+        </div>
+        </div>
+        <div class="form-group">
+          <h5 style="color: red">*</h5><input type="text" name="location" id="location" class="form-control" #location="ngModel" ngModel required>
+        <div *ngIf="location.touched && location.invalid">
+          <p *ngIf="location.errors.required" class="alert alert-danger">please enter location...</p>
+
+        </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Requirement</button>
+        </div>
+</form>
