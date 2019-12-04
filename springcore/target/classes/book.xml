@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="book" class="com.ustglobal.springcore.book.Book">
+    <property name="name" value="java book"></property>
+    <property name="author" value="Deepthi"></property>
+    <property name="price" value="100"></property>
+    </bean>
+    <bean id="author" class="com.ustglobal.springcore.book.Author">
+    <property name="aname" value="mallika"></property>
+    <property name="penName" value="renold"></property>
+    </bean>
+</beans>
