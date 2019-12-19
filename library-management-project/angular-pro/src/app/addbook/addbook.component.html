@@ -1,0 +1,45 @@
+<div class="container py-5" style="background:gainsboro">
+    <div class="card" style="width: 600px; margin: auto;">
+
+<div class="card-header bg-primary text-white">
+<h2 style="text-align: center;">Add Book Here</h2>
+</div>
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5">
+    <form #addBookForm="ngForm" (ngSubmit)="addBook(addBookForm)" method="POST"
+    role="form">
+    <div class="form-group">
+        <input type="number" name="bid" id="bid" placeholder="Enter id number.." 
+        class="form-control mb-3" #bid='ngModel' ngModel required>
+        <div *ngIf="bid.invalid && bid.touched">
+            <p *ngIf="bid.errors.required" class="text-danger">*This field is mandatory
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="bname" id="bname" placeholder="Enter Name.." 
+        class="form-control mb-3" #bName='ngModel' minlength="3" maxlength="10" ngModel required>
+        <div *ngIf="bName.invalid && bName.touched">
+            <p *ngIf="bName.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="bName.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+            <p *ngIf="bName.errors.maxlength" class="text-danger">*This field accepts maximun
+            10 characters
+                    
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="author" id="author" placeholder="Enter Auther Name.." 
+        class="form-control mb-3" #author='ngModel' minlength="3" ngModel required>
+        <div *ngIf="author.invalid && author.touched">
+            <p *ngIf="author.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="author.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+        </div>
+    </div>
+        <button class="btn btn-outline-dark" type="submit" [disabled]="addBookForm.invalid">Add</button>
+    </form>
+    <h3>{{result}}</h3>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="container py-5" style="background:gainsboro">
+    <div class="card" style="width: 600px; margin: auto;">
+        <div class="card-header bg-primary text-white">
+<h2 style="text-align: center;">Request Book Here</h2>
+        </div>
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5">   
+         <form #requestBookForm='ngForm' (ngSubmit)='requestBook(requestBookForm)'>
+        <div class="form-group">        
+            <input type="number" name="studentId" id="studentId" placeholder="Enter Student id.." 
+        #studentId='ngModel' ngModel required class="form-control mb-3">
+            <div *ngIf="studentId.invalid && studentId.touched">
+                        <p *ngIf="studentId.errors.required" class="text-danger">*This field is mandatory
+            </div>
+        </div>
+         <div class="form-group">
+        <input type="number" name="bookId" id="bookId" placeholder="Enter book id.." 
+        #bookId='ngModel' ngModel required class="form-control mb-3">
+        <div *ngIf="bookId.invalid && bookId.touched">
+            <p *ngIf="bookId.errors.required" class="text-danger">*This field is mandatory
+          </div>
+          </div>
+          <div class="form-group">
+        <input type="text" name="bookname" id="bookname" placeholder="Enter book Name.." 
+        #bookname='ngModel' minlength="3" maxlength="10" ngModel required class="form-control mb-3">
+        <div *ngIf="bookname.invalid && bookname.touched">
+                        <p *ngIf="bookname.errors.required" class="text-danger">*This field is mandatory
+                        <p *ngIf="bookname.errors.minlength" class="text-danger">*This field accepts minimum
+                            3 characters
+                            <p *ngIf="bookname.errors.maxlength" class="text-danger">*This field accepts maximum
+                                10 characters
+        </div>
+                    </div>
+<div class="form-group">
+        <input type="text" name="author" id="author" placeholder="Enter Auther Name.." 
+        #author='ngModel' minlength="3" maxlength="10" ngModel required class="form-control mb-3">
+        <div *ngIf="author.invalid && author.touched">
+            <p *ngIf="author.errors.required" class="text-danger">*This field is mandatory
+            <p *ngIf="author.errors.minlength" class="text-danger">*This field accepts minimum
+                3 characters
+                <p *ngIf="author.errors.maxlength" class="text-danger">*This field accepts minimum
+                    3 characters
+</div>
+</div>
+    <div class="form-group">
+        <input type="date" name="date" id="date" #date='ngModel' ngModel required
+            class="form-control mb-3" placeholder="Enter DOR..">
+            <div *ngIf="date.invalid && date.touched">
+            <p *ngIf="date.errors.required" class="text-danger">*This field is mandatory
+            </div>
+    </div>
+        <button class="btn btn-outline-dark float-right" type="submit" [disabled]="requestBookForm.invalid">Make Request</button>
+        
+    </form>
+</div>
+</div>
+</div>
+

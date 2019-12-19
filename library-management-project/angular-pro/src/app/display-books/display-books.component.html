@@ -1,0 +1,24 @@
+<div class="col-md-6 offset-3 mt-4 mb-4">
+<table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr border="2px">
+                <th>bid</th>
+                <th>bname</th>
+                <th>author</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let book of books.book'>
+                <td>{{book.bid}}</td>
+                <td>{{book.bname}}</td>
+                <td>{{book.author}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <div style="text-align: center;">
+            <a class="nav-link" routerLink="/request-book">click here to request book<span class="sr-only">(current)</span></a>
+        </div>
+
+    

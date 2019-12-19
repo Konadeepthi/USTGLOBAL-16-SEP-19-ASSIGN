@@ -1,0 +1,49 @@
+<div class="container py-5" style="background:gainsboro">
+    <div class="card" style="width: 600px; margin: auto;">
+        <div class="card-header bg-success text-white">
+<h2 style="text-align: center;">Issue Book</h2>
+</div>
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5">
+    <form #issueBookForm="ngForm" (ngSubmit)="issueBook(issueBookForm)" method="POST"
+    role="form">
+    <div class="form-group">
+        <input type="number" name="bookid" id="bookid" placeholder="Enter id number.." 
+        class="form-control mb-3" #bookid='ngModel' ngModel required>
+        <div *ngIf="bookid.invalid && bookid.touched">
+            <p *ngIf="bookid.errors.required" class="text-danger">*This field is mandatory
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="bookName" id="bookName" placeholder="Enter book name.." 
+        class="form-control mb-3" #bookName='ngModel' minlength="3" ngModel required>
+        <div *ngIf="bookName.invalid && bookName.touched">
+            <p *ngIf="bookName.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="bookName.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+            <p *ngIf="bookName.errors.maxlength" class="text-danger">*This field accepts maximun
+            10 characters
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="date" name="issueDate" id="issueDate" placeholder="Enter issue date.." 
+        class="form-control mb-3" #issueDate='ngModel' ngModel required>
+        <div *ngIf="issueDate.invalid && issueDate.touched">
+            <p *ngIf="issueDate.errors.required" class="text-danger">*This field is mandatory
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="date" name="returnDate" id="returnDate" placeholder="Enter return date.." 
+        class="form-control mb-3" #returnDate='ngModel' ngModel required>
+        <div *ngIf="returnDate.invalid && returnDate.touched">
+            <p *ngIf="returnDate.errors.required" class="text-danger">*This field is mandatory
+        </div>
+    </div>
+        <input type="number" name="fine" id="fine" placeholder="Enter fine.." 
+        class="form-control mb-3" #fine='ngModel' ngModel >
+        <button class="btn btn-outline-dark" type="submit" [disabled]="issueBookForm.invalid">IssueBook</button>
+    </form>
+</div>
+<br>
+</div>
+</div>
