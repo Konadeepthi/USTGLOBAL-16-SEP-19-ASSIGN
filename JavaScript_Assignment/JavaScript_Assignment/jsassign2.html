@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+</head>
+<body>
+    <script>
+    var a=5;
+    console.log("factorial named function");
+    fact(a)
+    function fact(a){
+        var fact_no=1;
+        var i;
+        for( i=a;i>=1;i--){
+            fact_no=fact_no*i;
+        }
+        console.log("factorial of "+a+"is="+fact_no);
+    }   
+    //annonyms function
+    console.log("factorial annonym function");
+    var fac= function(c){
+        var n1=1;
+        for(var j=c;j>=1;j--){
+            n1*=j;
+        }
+        return n1;
+    }
+    var d=10;
+    console.log('fact of '+d+' is='+fac(d));
+//self invokation function
+console.log("factorial self invoked function");
+
+(function(a){
+    var sum=1;
+    for(var i=a;i>=1;i--){
+        sum*=i;
+    }
+    console.log("fact of"+a+' is='+sum);
+})(12);
+//fat  Arrow
+console.log("factorial Fat Arrow function");
+var n=7;
+var sumfact=1;
+var facts=a=>{
+    for(var i=a;i>=1;i--){
+        sumfact*=i;
+    }
+}
+facts(n);
+console.log("factorial of "+n+' is'+sumfact);
+
+
+
+    </script>
+
+    <script>
+    // Fibonocci Series
+    //Named Function
+    console.log("fibonocci series named function");
+    var a=10;
+     fib(a);
+    function fib(b){
+
+        var fib1=0,fib2=1,fib3=0;
+        console.log(fib1);
+        console.log(fib2);
+        
+        while(fib3<b){
+            fib3=fib1+fib2;
+            fib1=fib2;
+            fib2=fib3;
+            console.log(fib3);
+        }
+
+    }
+    //Annonym Function
+    console.log("fibonocci series Annonym function");
+    var b=20;
+    var fib2=function(a){
+        var fib1=0,fib2=1,fib3=0;
+        console.log(fib1);
+        console.log(fib2);
+        
+        while(fib3<b){
+            fib3=fib1+fib2;
+            fib1=fib2;
+            fib2=fib3;
+            console.log(fib3);
+        }
+        
+    }
+    fib2(b);
+    //self Invoked function
+    console.log("fibonocci series Self Invokde function");
+    (function(c){
+        var fib1=0,fib2=1,fib3=0;
+        console.log(fib1);
+        console.log(fib2);
+        
+        while(fib3<b){
+            fib3=fib1+fib2;
+            fib1=fib2;
+            fib2=fib3;
+            console.log(fib3);
+        }
+    })(12);
+    //Fat Arrow
+    console.log("fibonocci series Fat Arrow function");
+    var fib3=(d)=>{
+        var fib1=0,fib2=1,fib3=0;
+        console.log(fib1);
+        console.log(fib2);
+        
+        while(fib3<b){
+            fib3=fib1+fib2;
+            fib1=fib2;
+            fib2=fib3;
+            console.log(fib3);
+        }
+        
+    }
+    fib3(45)
+    
+    </script>
+    <script>
+    //Circumference of circle
+    console.log("circumference of circle Named function");
+    var r=5;
+    var s;
+    circum(r);
+    function circum(s){
+        var res=2*Math.PI*s;
+        console.log('circumference of circle of redius='+s+" is="+res);
+    }
+
+
+    //Annonym Function
+    console.log("circumference of circle Annanyms function");
+    var circum2=function(s){
+        var res=2*Math.PI*s;
+        console.log('circumference of circle of redius='+s+" is="+res);
+    
+    }
+    var a=6;
+    circum2(a);
+    // Self Invoked Function
+    console.log("circumference of circle Self Invoked function");
+
+    (function(s){
+        var res=2*Math.PI*s;
+        console.log('circumference of circle of redius='+s+" is="+res);
+    
+    })(15);
+
+    //Far Arrow
+    console.log("circumference of circle Fat Arrow function");
+    var circum3=s=>{
+        var res=2*Math.PI*s;
+        console.log('circumference of circle of redius='+s+" is="+res);
+    
+    }
+    circum3(14);
+
+
+    </script>
+    <script>
+
+
+    var array=[4,2,5,12,34,6,9,7];
+    // Named function
+    
+    console.log("sum of array using named function");
+    addarray1(array);
+    function addarray1(arr){
+        var sum=0;
+        var i;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        console.log('sum of array is='+sum);
+    }
+
+    console.log("sum of array using Annonyms function");
+    // Annonyms Function
+    var addarray2=function(arr){
+        var sum=0;
+        var i;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        console.log('sum of array is='+sum);
+    
+    }
+    addarray2(array);
+
+    console.log("sum of array using Self Invoked function");
+
+    //Self Invoked Function
+
+    (function(arr){
+        var sum=0;
+        var i;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        console.log('sum of array is='+sum);
+    
+    })(array);
+
+    console.log("sum of array using fat Arrow function");
+    //Fat Arrow
+    var addarray3=arr=>{
+        var sum=0;
+        var i;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        console.log('sum of array is='+sum);
+    
+    }
+    addarray3(array);
+    
+    </script>
+    <script>
+    // Prime or not
+    
+    console.log("number is prime or not using named function");
+    var a=12;
+    prime(a);
+    function prime(b){
+        var flag=false;
+        for(var i=2;i<(b/2);i++)
+        {
+            if(b%i===0){
+                flag=true;
+                break;
+            }
+        }
+        if(flag===true){
+            console.log(b+'  no is not prime');
+        }else{
+            console.log(b+' no is prime')
+        }
+
+    }
+
+    //Annonym Function
+    console.log("number is prime or not using Annonyms function");
+    var prime1=function(b){
+        var flag=false;
+        for(var i=2;i<(b/2);i++)
+        {
+            if(b%i===0){
+                flag=true;
+                break;
+            }
+        }
+        if(flag===true){
+            console.log(b+'  no is not prime');
+        }else{
+            console.log(b+'  no is prime')
+        }
+    }
+    prime1(5);
+
+    //self invoked 
+    console.log("number is prime or not using Self Invoked function");
+    (function(b){
+        var flag=false;
+        for(var i=2;i<(b/2);i++)
+        {
+            if(b%i===0){
+                flag=true;
+                break;
+            }
+        }
+        if(flag===true){
+            console.log(b+'  no is not prime');
+        }else{
+            console.log(b+'  no is prime')
+        }
+    })(87);
+
+    //Fat Arrow
+    console.log("number is prime or not using Fat Arrow function");
+    prime3=b=>{
+        var flag=false;
+        for(var i=2;i<(b/2);i++)
+        {
+            if(b%i===0){
+                flag=true;
+                break;
+            }
+        }
+        if(flag===true){
+            console.log(b+'  no is not prime');
+        }else{
+            console.log(b+'  no is prime')
+        }
+    }
+    prime3(65);
+console.log(h1);
+var h1;
+
+
+    </script>
+</body>
+</html>

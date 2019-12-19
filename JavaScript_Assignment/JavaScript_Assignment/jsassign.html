@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+var person={
+    name: 'ram',
+    page : 23,
+   // function :person( name, age){
+    //    this:name=name,
+      //  this:age=age
+    //}
+    getDetails:function () {
+        console.log('name='+this.name+' age='+this.page);
+    
+    }
+}
+var car={
+    name : 'Benz',
+    color : 'black',
+    details:function(){
+        return 'car name='+this.name+' color='+this.color;
+    }
+}
+var student={
+    name: 'kumar',
+    usn : '132CS',
+    StudentDetails:function(){
+        console.log('student name='+this.name+' student USN='+this.usn);
+    }
+}
+var laptop={
+    brand : 'lenovo',
+    color : 'black',
+    lapDetails:function(){
+        console.log("lap name="+this.name+" lap color="+this.color);
+    }
+}
+var mobile={
+    brand : 'nokia',
+    type : 'smartphone',
+    mobDetails:function(){
+        console.log('name='+this.name+' type='+this.type);
+    }
+}
+person.getDetails();
+console.log(car.details());
+laptop.lapDetails();
+mobile.mobDetails();
+</script>
+</head>
+<body>
+    <script>
+    var trainer=new Object();
+    trainer.name='kumar';
+    trainer.skill="java";
+    var bike=new Object();
+    bike.brand='hero';
+    bike.color='red';
+    var bag=new Object();
+    bag.brand='skybag';
+    bag.color='black';
+    var pen=new Object();
+    pen.type='balpen';
+    pen.color='red';
+    //var p1= new person('madhu',45);
+    console.log('trainer name='+trainer.name+" skill"+trainer.skill);
+    console.log('bike name'+bike.name+' color='+bike.color);
+    console.log('bag brand='+bag.brand+' color='+bag.color);
+    console.log('pen type='+pen.type+' color='+pen.color);
+   // console.log("person name="+p1.name+' age='+p1.page);
+   
+   //creating array using new keyword
+   var arr1=new Array(1,2,3,4,5,6);
+   var arr2=new Array(14,54,3,2,6,7);
+   var arr3=new Array(7,4,5,7,8,4,9,2);
+   var arr4=new Array(8,7,9,2,4,6,4);
+   var arr5=new Array('b','a','n,','g','a','l','o','r','e');
+
+   //creating array without using new keyword
+   var ar1=[1,2,5,6,8,9];
+   var ar2=[4,5,7,6,,9,4];
+   var ar3=[78,4,4,5,2,4,6];
+   var ar4=[95,4,52,4,5,4];
+   var ar5=['b','a','n','g'];
+   // printing array using loop
+   for(var i=0;i<arr1.length;i++){
+       console.log(arr1[i]);
+   }
+   for(var j=0;j<ar5.length;j++){
+       console.log(ar5[j]);
+   }
+   
+
+    </script>
+</body>
+</html>

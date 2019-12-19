@@ -1,0 +1,57 @@
+#name{
+    color: blueviolet;
+}
+h1{
+    color: rgb(241, 15, 140);
+}
+form{
+    border: 1px solid black;
+    width: 350px;
+    height: 400px;
+    margin-left: 494px;
+    margin-top: 160px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-image: url("Isopoly_01.gif"); */
+    background-size: cover;
+    /* color: white; */
+    border-radius: 30px;
+}
+body{
+    /* background-image: url(/images/sunrise-4473359__340.jpg); */
+    background-size: cover;
+
+
+}
+label{
+    color: rgb(209, 16, 113);
+}
+input[type="text"],input[type="password"]{
+    width: 250px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    outline: none;
+    color: brown;
+}
+input[type="submit"]{
+    margin-top:15px;
+    padding: 5px 40px;
+    /* background-color: rgb(9, 9, 151); */
+    outline: none;
+    color: rgb(8, 8, 8);
+    border-radius: 25px;   
+}
+.user-error{
+    color: rgb(252, 9, 9);
+    
+    font-size: 1px;
+}
+.pasw-error{
+    color: red;
+    font-size: 1px;
+}
