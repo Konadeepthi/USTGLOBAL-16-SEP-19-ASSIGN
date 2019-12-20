@@ -1,0 +1,63 @@
+<div class="container py-5" style="background:gainsboro">
+    <div class="card" style="width: 600px; margin: auto;">
+
+<div class="card-header bg-primary text-white">
+<h2 style="text-align: center;">Add Book Here</h2>
+</div>
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5">
+    <form #addProductForm="ngForm" (ngSubmit)="addProduct(addProductForm)" method="POST"
+    role="form">
+    <div class="form-group">
+        <input type="text" name="name" id="name" placeholder="Enter name of product.." 
+        class="form-control mb-3" #name='ngModel' ngModel required>
+        <div *ngIf="name.invalid && name.touched">
+            <p *ngIf="name.errors.required" class="text-danger">*This field is mandatory
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="category" id="category" placeholder="Enter category.." 
+        class="form-control mb-3" #category='ngModel' minlength="3" maxlength="10" ngModel required>
+        <div *ngIf="category.invalid && category.touched">
+            <p *ngIf="category.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="category.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+            <p *ngIf="category.errors.maxlength" class="text-danger">*This field accepts maximun
+            10 characters
+                    
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="company" id="company" placeholder="Enter company.." 
+        class="form-control mb-3" #company='ngModel' minlength="3" ngModel required>
+        <div *ngIf="company.invalid && author.touched">
+            <p *ngIf="company.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="company.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="quantity" id="quantity" placeholder="Enter quantity.." 
+        class="form-control mb-3" #quantity='ngModel' minlength="3" ngModel required>
+        <div *ngIf="quantity.invalid && author.touched">
+            <p *ngIf="quantity.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="quantity.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="price" id="price" placeholder="Enter price.." 
+        class="form-control mb-3" #price='ngModel' minlength="3" ngModel required>
+        <div *ngIf="price.invalid && author.touched">
+            <p *ngIf="price.errors.required" class="text-danger">*This field is mandatory
+                <p *ngIf="price.errors.minlength" class="text-danger">*This field accepts minimum
+                    3 characters
+        </div>
+    </div>
+        <button class="btn btn-outline-dark" type="submit" [disabled]="addBookForm.invalid">Add</button>
+    </form>
+    <h3>{{result}}</h3>
+</div>
+</div>
+</div>
+

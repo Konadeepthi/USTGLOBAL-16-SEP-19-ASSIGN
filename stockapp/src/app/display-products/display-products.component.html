@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-3 mt-4 mb-4">
+    <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr border="2px">
+                    <th>id</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>company</th>
+                    <th>quantity</th>
+                    <th>price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let product of products.productBeans'>
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.company}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
